@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsecutpy8nrup"]
+
+[ext_resource type="Texture2D" uid="uid://bibpvwg6gp3nn" path="res://art/arrows.webp" id="1_84j17"]
+[ext_resource type="Script" uid="uid://pegy7aw4kj4m" path="res://objects/arrow_detector.gd" id="2_khwtu"]
+
+[node name="arrowDetector" type="Sprite2D"]
+position = Vector2(-1, 2)
+texture = ExtResource("1_84j17")
+hframes = 4
+vframes = 3
+script = ExtResource("2_khwtu")
+
+[node name="RandomSpawnTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="RandomSpawnTimer" to="." method="_on_random_spawn_timer_timeout"]

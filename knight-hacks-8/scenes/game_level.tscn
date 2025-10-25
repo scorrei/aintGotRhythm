@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvvgqai1s0su1"]
+
+[ext_resource type="PackedScene" uid="uid://bktl4slsxd2in" path="res://obects/bullet_catcher.tscn" id="1_h3dka"]
+[ext_resource type="PackedScene" uid="uid://el34jsaol80u" path="res://obects/bullet.tscn" id="2_6fv2f"]
+
+[node name="GameLevel" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="triCatcher" parent="." instance=ExtResource("1_h3dka")]
+position = Vector2(-291, -36)
+button_name = "button_Triangle"
+
+[node name="cirCatcher" parent="." instance=ExtResource("1_h3dka")]
+position = Vector2(-291, -36)
+button_name = "button_Circle"
+
+[node name="xCatcher" parent="." instance=ExtResource("1_h3dka")]
+position = Vector2(-291, -36)
+button_name = "button_X"
+
+[node name="squCatcher" parent="." instance=ExtResource("1_h3dka")]
+position = Vector2(-291, -36)
+button_name = "button_Square"
+
+[node name="bullet" parent="." instance=ExtResource("2_6fv2f")]
+position = Vector2(288, -32)

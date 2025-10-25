@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bktl4slsxd2in"]
+
+[ext_resource type="Texture2D" uid="uid://b1nr8n1oc0sqg" path="res://assets/arrows.webp" id="1_fsp0m"]
+[ext_resource type="Script" uid="uid://crxlrqbgsft40" path="res://scripts/bullet_catcher.gd" id="2_330xq"]
+
+[node name="bulletCatcher" type="Sprite2D"]
+position = Vector2(-122, -50)
+texture = ExtResource("1_fsp0m")
+hframes = 4
+vframes = 3
+script = ExtResource("2_330xq")

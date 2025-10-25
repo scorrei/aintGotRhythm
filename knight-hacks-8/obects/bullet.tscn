@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://el34jsaol80u"]
+
+[ext_resource type="Texture2D" uid="uid://b1nr8n1oc0sqg" path="res://assets/arrows.webp" id="1_y25gk"]
+[ext_resource type="Script" uid="uid://c02gxxdfvona5" path="res://scripts/bullet.gd" id="2_l5glv"]
+
+[node name="bullet" type="Sprite2D"]
+texture = ExtResource("1_y25gk")
+hframes = 4
+vframes = 3
+frame = 4
+script = ExtResource("2_l5glv")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true

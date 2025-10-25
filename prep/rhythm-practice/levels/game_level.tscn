@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp4tj2abohhk2"]
+
+[ext_resource type="PackedScene" uid="uid://bsecutpy8nrup" path="res://objects/arrow_detector.tscn" id="1_qc6i3"]
+[ext_resource type="PackedScene" uid="uid://b5oso73bftwdp" path="res://levels/game_ui.tscn" id="2_sklrn"]
+
+[node name="GameLevel" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ArrowDetector" parent="." instance=ExtResource("1_qc6i3")]
+position = Vector2(-520, -200)
+key_name = "button_Left"
+
+[node name="ArrowDetector2" parent="." instance=ExtResource("1_qc6i3")]
+position = Vector2(-520, 75)
+frame = 1
+key_name = "button_Down"
+
+[node name="ArrowDetector3" parent="." instance=ExtResource("1_qc6i3")]
+position = Vector2(-520, 200)
+frame = 3
+key_name = "button_Right"
+
+[node name="ArrowDetector4" parent="." instance=ExtResource("1_qc6i3")]
+position = Vector2(-520, -75)
+frame = 2
+key_name = "button_Up"
+
+[node name="GameUI" parent="." instance=ExtResource("2_sklrn")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -1088.0
+offset_top = -568.0
+offset_right = -1088.0
+offset_bottom = -568.0
+grow_horizontal = 1
+grow_vertical = 1
