@@ -1,7 +1,7 @@
 extends Sprite2D
 @onready var bullet = preload("res://obects/bullet.tscn")
 @export var button_name: String = ""
-
+@export var place: float = position.y
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 func CreateBullet():
 	var bullet_inst = bullet.instantiate()
 	get_tree().get_root().call_deferred("add_child", bullet_inst)
-	bullet_inst.setBullet(position.y)
+	bullet_inst.setBullet(position.y, frame + 4)
