@@ -1,8 +1,10 @@
+AnimationPlayer
+AnimatedSprite2D
+Sprite2D
 RichTextLabel
 TextEdit
 CanvasLayer
 Timer
 MidiPlayer
-Sprite2D
 Camera2D
 AudioStreamPlayer2D

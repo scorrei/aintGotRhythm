@@ -33,6 +33,8 @@ func _process(delta: float) -> void:
 			
 			print(distance_from_pass)
 			
+			self.get_child(0).visible = true
+			
 			if distance_from_pass < perfect_press_threshold:
 				Global.IncrementScore.emit(perfect_press_score)
 			elif distance_from_pass < great_press_threshold:

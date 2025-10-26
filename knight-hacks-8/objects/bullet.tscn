@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://el34jsaol80u"]
 
-[ext_resource type="Texture2D" uid="uid://bv3pn5bdoxv7f" path="res://assets/arrows (2).png" id="1_3ndsa"]
+[ext_resource type="Texture2D" uid="uid://bv3pn5bdoxv7f" path="res://arrows (2).png" id="1_3ndsa"]
 [ext_resource type="Script" uid="uid://c02gxxdfvona5" path="res://scripts/bullet.gd" id="2_xbcx7"]
 
 [node name="bullet" type="Sprite2D"]

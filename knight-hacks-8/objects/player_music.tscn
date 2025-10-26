@@ -8,7 +8,7 @@
 script = ExtResource("1_n70yn")
 
 [node name="MidiPlayer" parent="." instance=ExtResource("2_mhido")]
-file = "res://Song_extended_buttonsplit.mid"
+file = "res://Song_final_extended_mapped.mid"
 playing = true
 soundfont = "res://EGuitarFSBS-bridge-clean-small-20220911.sf2"
 

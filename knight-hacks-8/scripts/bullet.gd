@@ -4,7 +4,7 @@ extends Sprite2D
 var initial_x: float = 200
 
 var has_passed: bool = false
-var pass_threshold = -390
+var pass_threshold = -360
 
 func _init():
 	set_process(false)
