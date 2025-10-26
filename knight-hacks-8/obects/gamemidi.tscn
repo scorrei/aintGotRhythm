@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://elbrmyq2pmlu"]
+
+[ext_resource type="PackedScene" uid="uid://bdvkdv77fslji" path="res://midi/ADSR.tscn" id="2_pcbcx"]
+[ext_resource type="PackedScene" uid="uid://cuyd1qv0pn26e" path="res://midi/MidiPlayer.tscn" id="3_roxwx"]
+
+[node name="gamemidi" type="Node2D"]
+
+[node name="ADSR" parent="." instance=ExtResource("2_pcbcx")]
+autoplay = true
+
+[node name="MidiPlayer" parent="." instance=ExtResource("3_roxwx")]
+file = "res://Song_labelled_numbers.mid"
+playing = true
+soundfont = "res://EGuitarFSBS-bridge-clean-20220911.sf2"
+
+[connection signal="appeared_instrument_name" from="MidiPlayer" to="." method="_on_midi_player_appeared_instrument_name"]
+[connection signal="midi_event" from="MidiPlayer" to="." method="_on_midi_player_midi_event"]

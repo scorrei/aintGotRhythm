@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b45iyb2bydrg3"]
+
+[ext_resource type="Script" uid="uid://bq4tjrvetv087" path="res://scripts/player_music.gd" id="1_n70yn"]
+[ext_resource type="PackedScene" uid="uid://cuyd1qv0pn26e" path="res://midi/MidiPlayer.tscn" id="2_mhido"]
+[ext_resource type="PackedScene" uid="uid://bdvkdv77fslji" path="res://midi/ADSR.tscn" id="3_54qpc"]
+
+[node name="playerMusic" type="Node2D"]
+script = ExtResource("1_n70yn")
+
+[node name="MidiPlayer" parent="." instance=ExtResource("2_mhido")]
+file = "res://Song_labelled_numbers.mid"
+playing = true
+soundfont = "res://EGuitarFSBS-bridge-clean-small-20220911.sf2"
+
+[node name="ADSR" parent="." instance=ExtResource("3_54qpc")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.1529999999999998
+one_shot = true
+autostart = true
+
+[connection signal="midi_event" from="MidiPlayer" to="." method="_on_midi_player_midi_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
