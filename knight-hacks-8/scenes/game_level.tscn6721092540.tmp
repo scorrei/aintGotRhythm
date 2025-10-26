@@ -12,25 +12,25 @@ script = ExtResource("1_3tmo4")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="triCatcher" parent="." instance=ExtResource("1_h3dka")]
-position = Vector2(-386.5, -36)
+position = Vector2(-291, -36)
 frame = 2
 button_name = "button_Triangle"
 place = 0.0
 
 [node name="cirCatcher" parent="." instance=ExtResource("1_h3dka")]
-position = Vector2(-386.5, -36)
+position = Vector2(-291, -36)
 frame = 3
 button_name = "button_Circle"
 
 [node name="xCatcher" parent="." instance=ExtResource("1_h3dka")]
-position = Vector2(-386.5, -36)
+position = Vector2(-291, -36)
 frame = 1
 button_name = "button_X"
 
 [node name="Midi" parent="." instance=ExtResource("3_d1hwj")]
 
 [node name="squCatcher" parent="." instance=ExtResource("1_h3dka")]
-position = Vector2(-386.5, -36)
+position = Vector2(-291, -36)
 button_name = "button_Square"
 
 [node name="bullet" parent="." instance=ExtResource("2_6fv2f")]
