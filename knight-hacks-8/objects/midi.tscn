@@ -11,7 +11,7 @@ script = ExtResource("1_nhgnl")
 autoplay = true
 
 [node name="MidiPlayer" parent="." instance=ExtResource("3_2l6l0")]
-file = "res://song_Delayed2.mid"
+file = "res://Song_extended_buttonsplit.mid"
 playing = true
 soundfont = "res://FingerBassYR 20190930.sf2"
 

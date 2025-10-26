@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw30d6ceg6oas"]
+
+[sub_resource type="GDScript" id="GDScript_b2b7x"]
+script/source = "extends Node2D
+
+signal IncrementScore(incr: int)
+"
+
+[node name="Signals" type="Node2D"]
+script = SubResource("GDScript_b2b7x")

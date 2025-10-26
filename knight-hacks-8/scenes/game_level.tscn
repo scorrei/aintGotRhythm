@@ -1,41 +1,46 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvvgqai1s0su1"]
+[gd_scene load_steps=7 format=3 uid="uid://bvvgqai1s0su1"]
 
 [ext_resource type="Script" uid="uid://8p7mdksua2hd" path="res://scenes/game_level.gd" id="1_3tmo4"]
-[ext_resource type="PackedScene" uid="uid://bktl4slsxd2in" path="res://obects/bullet_catcher.tscn" id="1_h3dka"]
-[ext_resource type="PackedScene" uid="uid://el34jsaol80u" path="res://obects/bullet.tscn" id="2_6fv2f"]
-[ext_resource type="PackedScene" uid="uid://bl3amp7nnnvfp" path="res://obects/midi.tscn" id="3_d1hwj"]
-[ext_resource type="PackedScene" uid="uid://b45iyb2bydrg3" path="res://obects/player_music.tscn" id="5_hjd5e"]
+[ext_resource type="PackedScene" uid="uid://bktl4slsxd2in" path="res://objects/bullet_catcher.tscn" id="1_h3dka"]
+[ext_resource type="PackedScene" uid="uid://bl3amp7nnnvfp" path="res://objects/midi.tscn" id="3_d1hwj"]
+[ext_resource type="PackedScene" uid="uid://b45iyb2bydrg3" path="res://objects/player_music.tscn" id="5_hjd5e"]
+[ext_resource type="PackedScene" uid="uid://bkvt5a43e5clx" path="res://scenes/game_ui.tscn" id="6_1k01j"]
+[ext_resource type="Texture2D" uid="uid://0vjn14qhetqn" path="res://assets/background.jpg" id="6_oslck"]
 
 [node name="GameLevel" type="Node2D"]
 script = ExtResource("1_3tmo4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(0, 3.2500067)
+scale = Vector2(0.6, 0.6157143)
+texture = ExtResource("6_oslck")
+
 [node name="triCatcher" parent="." instance=ExtResource("1_h3dka")]
-position = Vector2(-386.5, -36)
+position = Vector2(-336, -40)
 frame = 2
 button_name = "button_Triangle"
 place = 0.0
 
 [node name="cirCatcher" parent="." instance=ExtResource("1_h3dka")]
-position = Vector2(-386.5, -36)
+position = Vector2(-336, -40)
 frame = 3
 button_name = "button_Circle"
 
 [node name="xCatcher" parent="." instance=ExtResource("1_h3dka")]
-position = Vector2(-386.5, -36)
+position = Vector2(-336, -40)
 frame = 1
 button_name = "button_X"
 
 [node name="Midi" parent="." instance=ExtResource("3_d1hwj")]
 
 [node name="squCatcher" parent="." instance=ExtResource("1_h3dka")]
-position = Vector2(-386.5, -36)
+position = Vector2(-336, -40.000004)
 button_name = "button_Square"
 
-[node name="bullet" parent="." instance=ExtResource("2_6fv2f")]
-position = Vector2(288, -32)
-
 [node name="playerMusic" parent="." instance=ExtResource("5_hjd5e")]
+
+[node name="GameUI" parent="." instance=ExtResource("6_1k01j")]
 
 [connection signal="on_midi_event" from="playerMusic" to="." method="_on_player_music_on_midi_event"]

@@ -1,1 +1,4 @@
-res://obects/player_music.tscn
+res://scenes/game_level.tscn
+res://scripts/bullet.gd
+res://objects/bullet.tscn
+res://scripts/bullet_catcher.gd
